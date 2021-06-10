@@ -6,17 +6,17 @@ admin.site.register(Neighborhood)
 admin.site.register(Business)
 admin.site.register(User)
 
-#Action Admin
+# #Action Admin
 
-def make_published(neighborhoodadmin, request, queryset):
-    queryset.update(status='p')
-    make_published.short_description = "Mark verified Neighborhoods published"
+# def make_published(neighborhoodadmin, request, queryset):
+#     queryset.update(status='p')
+#     make_published.short_description = "Mark verified Neighborhoods published"
 
-class NeighborhoodAdmin(admin.ModelAdmin):
-    list_display = ['name', 'status']
-    ordering = ['name']
-    actions = [make_published]
+# class NeighborhoodAdmin(admin.ModelAdmin):
+#     list_display = ['name', 'status']
+#     ordering = ['name']
+#     actions = [make_published]
 
 
 
-admin.site.register(Neighborhood, NeighborhoodAdmin)
+# admin.site.register(Neighborhood, NeighborhoodAdmin)

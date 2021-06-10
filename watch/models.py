@@ -5,16 +5,16 @@ from django.contrib import admin
 
 # Create your models here.
 
-STATUS_CHOICES = [
-    ('d', 'Draft'),
-    ('p', 'Published'),
-    ('w', 'Withdrawn'),
-]
+# STATUS_CHOICES = [
+#     ('d', 'Draft'),
+#     ('p', 'Published'),
+#     ('w', 'Withdrawn'),
+# ]
 class Neighborhood(models.Model):
     name = models.CharField(max_length=30)
     location = models.CharField(max_length=50)
     occupants_count = models.IntegerField
-    admin = models.ForeignKey(admin,blank=True,null=True)
+    # admin = models.ForeignKey(admin,blank=True,null=True)
 
     def __str__(self):
         return self.name

@@ -1,5 +1,12 @@
 from django.urls import path, re_path
+from rest_framework import routers
 from . import views
+
+router = routers.DefaultRouter()
+router.register(r'neighbors', views.NeighborhoodViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'business', views.BusinessViewSet)
+
 
 urlpatterns=[
   path('api/neighbors/',views.NeighborhoodList.as_view(),name='neighbor'),

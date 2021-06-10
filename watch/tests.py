@@ -57,3 +57,31 @@ class UserTestCase(TestCase):
         self.new_user.delete_user()
         user = User.objects.all()
         self.assertTrue(len(user)==0)
+
+class BusinessTestCase(TestCase):
+    def test_user(self):
+        self.assertTrue
+
+    def test_save_user(self):
+        self.assertTrue
+    #Set up method
+
+    def setUp(self):
+        self.new_business = Business(name="Business Name", email="businessemail@domain.com", neighborhood="Business neighborhood")
+        self.new_user.save()
+        self.new_neighborhood = Business(business=self.new_business, email = "businessemail@domain.com", location="your location",category="your category")
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_user,Business))
+
+    def test_save_method(self):
+        self.new_business.save_business()
+        business = Business.objects.all()
+        self.assertTrue(len(business)>0)
+
+    def test_delete_method(self):
+        self.new_business.save_business()
+        self.new_business.delete_business()
+        business = Business.objects.all()
+        self.assertTrue(len(business)==0)
